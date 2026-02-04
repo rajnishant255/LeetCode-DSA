@@ -1,0 +1,18 @@
+class Solution {
+    public int lengthOfLastWord(String s) {
+        int count=0;
+        s=s.trim();         // used to remove trailing spaces as space before first word and space after last word
+        for(int i=s.length()-1; i>=0; i--)
+        {
+            if(s.charAt(i)!=' ')        // checks for the space arrived first single quote used to check as space is character
+            {
+                count++;
+            }   
+            else                        // and iff space arrived then break from the loop
+            {
+                     break;
+            }
+        }
+        return count;
+    }
+}
