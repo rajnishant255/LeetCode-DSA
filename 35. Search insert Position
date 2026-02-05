@@ -1,0 +1,12 @@
+class Solution {
+    public int searchInsert(int[] nums, int target) {
+        for(int i=0; i<nums.length; i++)
+        {  
+            if(nums[i]==target || nums[i]>target)   // if nums[i] > targegt or = target then return index
+            {
+                return i;
+            }
+        }
+        return nums.length;         // if element is greater than array element then length should return length
+    }
+}
