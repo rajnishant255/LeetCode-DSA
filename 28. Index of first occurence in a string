@@ -1,0 +1,15 @@
+class Solution {
+    public int strStr(String haystack, String needle)
+    {
+        
+         for(int i=0; i<=haystack.length()-needle.length(); i++) // iterate by original string haystack
+         {
+            if(haystack.substring(i,i+needle.length()).equals(needle)) 
+            {
+                return i;
+            }
+         }
+         return -1;
+        // return haystack.indexOf(needle);     //returns 1st index of needle & its a single line code
+    }
+}
