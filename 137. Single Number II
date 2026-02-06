@@ -1,0 +1,13 @@
+class Solution {
+    public int singleNumber(int[] nums) {
+        Arrays.sort(nums);
+        for(int i=0; i<nums.length-2; i+=3) // we have iterate to +3 as element repeat 3 times array to -2 as evry other element is atleast three times
+        {
+            if(nums[i]!=nums[i+2])
+            {
+                return nums[i];
+            }
+        }
+        return nums[nums.length-1];
+    }
+}
