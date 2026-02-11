@@ -1,0 +1,20 @@
+class Solution {
+    public int addDigits(int num) {
+       
+        if(num==0) return 0;
+
+         while (num >= 10) {   // keep reducing until single digit like when 11>=10 true then repeat and make sum 2
+            int Sum = 0;
+
+            while (num != 0) {
+                int digit = num % 10;
+                Sum += digit;
+                num = num / 10;
+            }
+
+            num = Sum;   // assign sum back to num for next iteration
+        }
+
+        return num;
+    }
+}
