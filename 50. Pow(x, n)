@@ -1,0 +1,22 @@
+class Solution {
+    public double myPow(double x, int n) {
+       // return Math.pow(x,n);     // using built in function single line code
+       if (n == 0) return 1;    // anything power zero is 1
+        
+        long N = n;            // handle overflow
+        if (N < 0) 
+        {
+            x = 1 / x;
+            N = -N;
+        }
+        
+        double ans = 1;
+        while (N > 0) {
+            if ((N & 1) == 1)  // if odd
+                ans =ans*x;
+            x =x*x;
+            N >>= 1;          // divide by 2
+        }
+        return ans;
+    }
+}
