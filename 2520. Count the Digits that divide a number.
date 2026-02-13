@@ -1,0 +1,12 @@
+class Solution {
+    public int countDigits(int num) {
+        int OriginalNum=num;        // store value in another variable
+        int count=0;
+        while(num!=0){
+            int digit=num%10;
+           if(OriginalNum % digit==0)  count++;       // if originalnum by dividing with digits return 0 then increase count           
+            num=num/10;
+        }
+        return count;       // return count that is number of times digit occur
+    }
+}
