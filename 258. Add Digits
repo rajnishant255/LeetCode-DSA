@@ -2,7 +2,7 @@ class Solution {
     public int addDigits(int num) {
        
         if(num==0) return 0;
-
+        // return 1-(num-1) % 9;    // return digits sum after adding digits then again add that like if 18 then subtract ont and then modulo 9 and then plus onr as it is valid for all and single line code
          while (num >= 10) {   // keep reducing until single digit like when 11>=10 true then repeat and make sum 2
             int Sum = 0;
 
